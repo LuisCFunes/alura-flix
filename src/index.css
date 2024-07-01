@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --frontend-color: #6BD1FF;
+  --secondary-color: #4a5568;
+  --font-size-base: 16px;
+}
+
+@layer base {
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+  }
