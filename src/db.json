@@ -12,8 +12,14 @@
         },
         {
             "id": "3",
-            "categorie": "Inovacion",
+            "categorie": "Innovacion",
+            "link": "https://youtu.be/N-Q53-fEtjM?si=ecymBoM_5StX2ALf"
+        },
+        {
+            "id": "4",
+            "categorie": "Frontend",
             "link": "https://youtu.be/N-Q53-fEtjM?si=ecymBoM_5StX2ALf"
         }
+        
     ]
 }

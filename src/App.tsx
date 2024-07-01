@@ -5,7 +5,7 @@ import Category from './components/CategorySection/Category'
 function App() {
 
   return (
-    <main className='bg-black'>
+    <main>
         <Header/>
         <Banner/>
         <Category/>

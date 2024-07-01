@@ -5,7 +5,8 @@ export default {
     extend: {
       colors: {
         'frontend': 'var(--frontend-color)',
-        'secondary': 'var(--secondary-color)',
+        'backend': 'var(--backend-color)',
+        'innovacion': 'var(--innovacion-color)',
       },
       fontFamily: {
         sans: ['Source Sans 3', 'sans-serif'],
