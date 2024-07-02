@@ -1,6 +1,7 @@
 import Logo from '../../assets/LogoMain.svg'
 import Home from '../../assets/home.svg'
 import Btn from './Btn'
+import { Link } from "react-router-dom";
 
 export default function App() {
     return (
@@ -11,11 +12,11 @@ export default function App() {
             <div className='md:hidden flex'>
                 <img className='' src={Home} alt="Logo" /></div>
             <div className='md:flex gap-4 hidden'>
-                <Btn text='text-white' border='border-white'>Inicio</Btn>
-                <Btn text='text-[#2271D1]' border='border-[#2271D1]'>Nuevo video</Btn>
+                <Link to={`/`}><Btn text='text-white' border='border-white'>Inicio</Btn></Link>
+                <Link to={`New`}><Btn text='text-[#2271D1]' border='border-[#2271D1]'>Nuevo video</Btn></Link>
             </div>
             <div className='flex gap-4 md:hidden'>
-                <Btn text='text-[#2271D1]' border='border-[#2271D1]'>Nuevo video</Btn>
+                <Link to={`New`}><Btn text='text-[#2271D1]' border='border-[#2271D1]'>Nuevo video</Btn> </Link>
             </div>
         </nav>
     )
