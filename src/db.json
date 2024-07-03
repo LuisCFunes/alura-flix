@@ -1,29 +1,19 @@
 {
   "media": [
     {
-      "id": "1",
-      "categorie": "Frontend",
-      "link": "https://youtu.be/N-Q53-fEtjM?si=ecymBoM_5StX2ALf"
-    },
-    {
-      "id": "2",
-      "categorie": "Backend",
-      "link": "https://youtu.be/N-Q53-fEtjM?si=ecymBoM_5StX2ALf"
-    },
-    {
-      "id": "3",
-      "categorie": "Innovacion",
-      "link": "https://youtu.be/N-Q53-fEtjM?si=ecymBoM_5StX2ALf"
-    },
-    {
-      "id": "4",
-      "categorie": "Frontend",
-      "link": "https://youtu.be/N-Q53-fEtjM?si=ecymBoM_5StX2ALf"
-    },
-    {
-      "id": "286276",
-      "link": "https://www.youtube.com/live/yeRsfT0-s_M?si=ICpfV-yUbrx8nc_G",
+      "id": "710080",
+      "link": "https://www.youtube.com/watch?v=yeRsfT0-s_M&t=12052s",
       "categorie": "Frontend"
+    },
+    {
+      "id": "943660",
+      "link": "https://www.youtube.com/watch?v=yeRsfT0-s_M&t=12052s",
+      "categorie": "Backend"
+    },
+    {
+      "id": "738264",
+      "link": "https://www.youtube.com/watch?v=yeRsfT0-s_M&t=12052s",
+      "categorie": "Innovacion"
     }
   ]
 }

@@ -4,6 +4,7 @@ interface Props {
     children: string;
     color: string;
     videos: Video[];
+    onDelete: (id: number) => void;
 }
 
 interface Video {
@@ -12,7 +13,7 @@ interface Video {
     link: string;
 }
 
-export default function CardCategory({ children, color, videos }: Props) {
+export default function CardCategory({ children, color, videos, onDelete }: Props) {
     console.log(videos);
     return (
         <>
@@ -21,7 +22,7 @@ export default function CardCategory({ children, color, videos }: Props) {
             </div>
             <div className='px-4 py-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2'>
                 {videos.map(video => (
-                    <VideoCard key={video.id} link={video.link} categorie={video.categorie} id={video.id} />
+                    <VideoCard key={video.id} link={video.link} categorie={video.categorie} id={video.id} onDelete={onDelete} />
                 ))}
             </div>
         </>

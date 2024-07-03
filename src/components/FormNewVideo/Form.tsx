@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { FormData } from "./type";
 import FormField from "./FormField";
-import PostDB from "../../fetching/Post";
+import { useVideoContext } from "../../fetching/VideoContext";
 
 function Form() {
   const {
@@ -12,6 +12,9 @@ function Form() {
     setError,
   } = useForm<FormData>();
 
+  const { addVideo } = useVideoContext();
+
+
   const options = [
     { value: 'Frontend', label: 'Frontend' },
     { value: 'Backend', label: 'Backend' },
@@ -21,7 +24,7 @@ function Form() {
   const onSubmit = async (data: FormData) => {
     const id = Math.floor(Math.random() * 1000000).toString(); 
     const postData = { id, ...data }; 
-    PostDB(postData); 
+    addVideo(postData); 
     reset();
   };
 

@@ -1,49 +1,34 @@
-import { useEffect, useState } from 'react';
-import CardCategory from './CardCategory';
+import CardCategory from "./CardCategory";
+import { useVideoContext } from "../../fetching/VideoContext";
 
-interface Video {
-    id: number;
-    categorie: string;
-    link: string;
+function Category() {
+  const { videos, deleteVideo } = useVideoContext();
+
+  const frontendVideos = videos.filter((video) => video.categorie === "Frontend");
+  const BackendVideos = videos.filter((video) => video.categorie === "Backend");
+  const InnovaciondVideos = videos.filter((video) => video.categorie === "Innovacion");
+
+  return (
+    <div className="px-4 py-6 grid justify-items-center">
+      {frontendVideos.length > 0 && (
+        <CardCategory color="bg-frontend" videos={frontendVideos} onDelete={deleteVideo}>
+          Frontend
+        </CardCategory>
+      )}
+
+      {BackendVideos.length > 0 && (
+        <CardCategory color="bg-backend" videos={BackendVideos} onDelete={deleteVideo}>
+          Backkend
+        </CardCategory>
+      )}
+
+      {InnovaciondVideos.length > 0 && (
+        <CardCategory color="bg-innovacion" videos={InnovaciondVideos} onDelete={deleteVideo}>
+          Innovacion
+        </CardCategory>
+      )}
+    </div>
+  );
 }
 
-function App() {
-    const [videos, setVideos] = useState<Video[]>([]);
-
-    useEffect(() => {
-        fetch('http://localhost:3000/media')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok ' + response.statusText);
-                }
-                return response.json();
-            })
-            .then((data: Video[]) => {
-                setVideos(data);
-            })
-            .catch(error => {
-                console.error('There was a problem with the fetch operation:', error);
-            });
-    }, []);
-
-    // Filtrar videos por categoría 'frontend'
-    const frontendVideos = videos.filter(video => video.categorie === 'Frontend');
-    const BackendVideos = videos.filter(video => video.categorie === 'Backend');
-    const InnovaciondVideos = videos.filter(video => video.categorie === 'Innovacion');
-
-    return (
-        <div className='px-4 py-6'>
-            <CardCategory color="bg-frontend" videos={frontendVideos}>
-                Frontend
-            </CardCategory>
-            <CardCategory color="bg-backend" videos={BackendVideos}>
-                Backkend
-            </CardCategory>
-            <CardCategory color="bg-innovacion" videos={InnovaciondVideos}>
-                Innovacion
-            </CardCategory>
-        </div>
-    );
-}
-
-export default App;
+export default Category;
