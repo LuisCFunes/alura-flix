@@ -2,10 +2,10 @@ import ReactPlayer from 'react-player';
 import Trash from '../../assets/Trash.svg';
 
 interface Video {
-  id: number;
+  id: string;
   categorie: string;
   link: string;
-  onDelete: (id: number) => void;
+  onDelete: (id: string) => void;
 }
 
 function VideoCard({ id, link,categorie, onDelete  }: Video) {

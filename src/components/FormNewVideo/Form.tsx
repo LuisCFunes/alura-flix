@@ -14,7 +14,6 @@ function Form() {
 
   const { addVideo } = useVideoContext();
 
-
   const options = [
     { value: 'Frontend', label: 'Frontend' },
     { value: 'Backend', label: 'Backend' },

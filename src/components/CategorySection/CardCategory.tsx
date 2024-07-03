@@ -4,17 +4,16 @@ interface Props {
     children: string;
     color: string;
     videos: Video[];
-    onDelete: (id: number) => void;
+    onDelete: (id: string) => void;
 }
 
 interface Video {
-    id: number;
+    id: string;
     categorie: string;
     link: string;
 }
 
 export default function CardCategory({ children, color, videos, onDelete }: Props) {
-    console.log(videos);
     return (
         <>
             <div className={`m-auto h-[92px] w-[296px] ${color} text-white rounded-lg text-[48px] font-extrabold flex justify-center items-center mb-4`}>
